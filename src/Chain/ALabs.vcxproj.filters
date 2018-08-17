@@ -63,9 +63,6 @@
     <ClCompile Include="libraries\blockchain\ForkBlocks.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="libraries\blockchain\GenesisJson.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="libraries\blockchain\Operations.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -444,9 +441,6 @@
     <ClCompile Include="libraries\glua\glua_api_types.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="libraries\blockchain\GenesisJson_test.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="libraries\glua\thinkyoung_lua_api.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -457,6 +451,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="libraries\utilities\CommonApi.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\blockchain\UpdateTransferConfig.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\blockchain\GenesisJson.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\blockchain\GenesisJson_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -603,9 +606,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="libraries\include\client\Notifier.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libraries\include\client\SeedNodes.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="libraries\include\net\ChainConnection.hpp">
@@ -1002,6 +1002,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="libraries\include\blockchain\Asset.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\include\blockchain\UpdateTransferConfig.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

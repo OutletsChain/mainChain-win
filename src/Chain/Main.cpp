@@ -30,7 +30,7 @@ int main(int argc, char** argv)
     {
 		
 
-        thinkyoung::client::ClientPtr client = std::make_shared<thinkyoung::client::Client>("ssc_client");
+        thinkyoung::client::ClientPtr client = std::make_shared<thinkyoung::client::Client>("ttchain_client");
         client->configure_from_command_line(argc, argv);
         client->start().wait();
     }

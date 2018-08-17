@@ -9,12 +9,12 @@
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="GRBit|Win32">
-      <Configuration>GRBit</Configuration>
+    <ProjectConfiguration Include="ALabs|Win32">
+      <Configuration>ALabs</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="GRBit|x64">
-      <Configuration>GRBit</Configuration>
+    <ProjectConfiguration Include="ALabs|x64">
+      <Configuration>ALabs</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
@@ -28,20 +28,21 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{2E545450-E2DE-49FB-8DDC-F45C3CDD1E0A}</ProjectGuid>
-    <RootNamespace>GRBit</RootNamespace>
+    <RootNamespace>ALabs</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>OLC</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GRBit|Win32'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ALabs|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -50,7 +51,7 @@
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GRBit|x64'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ALabs|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
@@ -76,13 +77,13 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='GRBit|Win32'" Label="PropertySheets">
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ALabs|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='GRBit|x64'" Label="PropertySheets">
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ALabs|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -93,33 +94,28 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>ALLchain-c</TargetName>
-    <IncludePath>$(IncludePath)</IncludePath>
+    <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <TargetName>ALLchain-c</TargetName>
-    <IncludePath>D:\OLC\SelfSell-master\src\Chain\libraries\include;$(IncludePath)</IncludePath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>D:\OLC\SelfSell-master\include;D:\OLC\SelfSell-master\src\Chain\libraries\include;$(IncludePath)</IncludePath>
+    <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\projects\goopal3.0\20160826\libraries\include;D:\projects\goopal3.0\20160826\libraries\include\lua;D:\GRBit_ver1\boost_1.55.x64;D:\GRBit_ver1\fc\include;D:\GRBit_ver1\grbit\libraries\blockchain\include;D:\GRBit_ver1\leveldb\include;D:\GRBit_ver1\db\include;D:\GRBit_ver1\include;D:\GRBit_ver1\grbit\libraries\utilities\include;D:\GRBit_ver1\grbit\libraries\wallet\include;D:\GRBit_ver1\grbit\libraries\cli\include;D:\GRBit_ver1\vendor\miniupnp;D:\GRBit_ver1\grbit\libraries\net\include;D:\GRBit_ver1\grbit\libraries\client\include;D:\GRBit_ver1\grbit\libraries\api\include;D:\GRBit_ver1\grbit\libraries\rpc\include;D:\GRBit_ver1\grbit\libraries\rpc_stubs\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include;.\libraries\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GRBit|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ALabs|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\projects\goopal3.0\20160826\libraries\include;D:\projects\goopal3.0\20160826\libraries\include\lua;D:\GRBit_ver1\boost_1.55.x64;D:\GRBit_ver1\fc\include;D:\GRBit_ver1\grbit\libraries\blockchain\include;D:\GRBit_ver1\leveldb\include;D:\GRBit_ver1\db\include;D:\GRBit_ver1\include;D:\GRBit_ver1\grbit\libraries\utilities\include;D:\GRBit_ver1\grbit\libraries\wallet\include;D:\GRBit_ver1\grbit\libraries\cli\include;D:\GRBit_ver1\vendor\miniupnp;D:\GRBit_ver1\grbit\libraries\net\include;D:\GRBit_ver1\grbit\libraries\client\include;D:\GRBit_ver1\grbit\libraries\api\include;D:\GRBit_ver1\grbit\libraries\rpc\include;D:\GRBit_ver1\grbit\libraries\rpc_stubs\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\projects\goopal3.0\20160826\libraries\include;D:\projects\goopal3.0\20160826\libraries\include\lua;D:\ALabs_ver1\boost_1.55.x64;D:\ALabs_ver1\fc\include;D:\ALabs_ver1\ALabs\libraries\blockchain\include;D:\ALabs_ver1\leveldb\include;D:\ALabs_ver1\db\include;D:\ALabs_ver1\include;D:\ALabs_ver1\ALabs\libraries\utilities\include;D:\ALabs_ver1\ALabs\libraries\wallet\include;D:\ALabs_ver1\ALabs\libraries\cli\include;D:\ALabs_ver1\vendor\miniupnp;D:\ALabs_ver1\ALabs\libraries\net\include;D:\ALabs_ver1\ALabs\libraries\client\include;D:\ALabs_ver1\ALabs\libraries\api\include;D:\ALabs_ver1\ALabs\libraries\rpc\include;D:\ALabs_ver1\ALabs\libraries\rpc_stubs\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -141,13 +137,13 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>..\..\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;bts_db.lib;leveldb_debug.lib;easylzma_static_debug.lib;udt_debug.lib;libboost_thread-vc120-mt-gd-1_55.lib;libboost_date_time-vc120-mt-gd-1_55.lib;libboost_system-vc120-mt-gd-1_55.lib;libboost_filesystem-vc120-mt-gd-1_55.lib;libboost_program_options-vc120-mt-gd-1_55.lib;libboost_signals-vc120-mt-gd-1_55.lib;libboost_serialization-vc120-mt-gd-1_55.lib;libboost_chrono-vc120-mt-gd-1_55.lib;libboost_unit_test_framework-vc120-mt-gd-1_55.lib;libboost_context-vc120-mt-gd-1_55.lib;libboost_locale-vc120-mt-gd-1_55.lib;libboost_iostreams-vc120-mt-gd-1_55.lib;libboost_coroutine-vc120-mt-gd-1_55.lib;ssleay32MDd.lib;libeay32MDd.lib;WS2_32.lib;Userenv.lib;Rpcrt4.lib;crypt32.lib;shlwapi.lib;miniupnpc_debug.lib;WS2_32.Lib;IPHlpApi.Lib;fc_debug.lib;secp256k1_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)\ALLchain-c.exe</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
     </Bscmake>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GRBit|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ALabs|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
@@ -167,22 +163,6 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\OLC\SelfSell-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -197,7 +177,26 @@
       <OptimizeReferences>false</OptimizeReferences>
       <AdditionalLibraryDirectories>..\..\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;bts_db.lib;leveldb.lib;easylzma_static.lib;udt.lib;libboost_thread-vc120-mt-1_55.lib;libboost_date_time-vc120-mt-1_55.lib;libboost_system-vc120-mt-1_55.lib;libboost_filesystem-vc120-mt-1_55.lib;libboost_program_options-vc120-mt-1_55.lib;libboost_signals-vc120-mt-1_55.lib;libboost_serialization-vc120-mt-1_55.lib;libboost_chrono-vc120-mt-1_55.lib;libboost_unit_test_framework-vc120-mt-1_55.lib;libboost_context-vc120-mt-1_55.lib;libboost_locale-vc120-mt-1_55.lib;libboost_iostreams-vc120-mt-1_55.lib;libboost_coroutine-vc120-mt-1_55.lib;ssleay32MD.lib;libeay32MD.lib;WS2_32.lib;Userenv.lib;Rpcrt4.lib;crypt32.lib;shlwapi.lib;miniupnpc.lib;WS2_32.Lib;IPHlpApi.Lib;fc.lib;secp256k1.lib;</AdditionalDependencies>
-      <OutputFile>$(OutDir)\ALLchain-c.exe</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\include;.\libraries\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUGWIN32;_CONSOLE;NDEBUG;NOMINMAX;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_WARNINGS;_SCL_SERCURE_NO_WARNINGS;BOOST_ALL_NO_LIB;CMAKE_INTDIR="Release";ALP_GLOBAL_API_LOG=1;_WINSOCK_DEPRECATED_NO_WARNINGS;LOAD_GENERATE_CODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;bts_db.lib;leveldb.lib;easylzma_static.lib;udt.lib;libboost_thread-vc120-mt-1_55.lib;libboost_date_time-vc120-mt-1_55.lib;libboost_system-vc120-mt-1_55.lib;libboost_filesystem-vc120-mt-1_55.lib;libboost_program_options-vc120-mt-1_55.lib;libboost_signals-vc120-mt-1_55.lib;libboost_serialization-vc120-mt-1_55.lib;libboost_chrono-vc120-mt-1_55.lib;libboost_unit_test_framework-vc120-mt-1_55.lib;libboost_context-vc120-mt-1_55.lib;libboost_locale-vc120-mt-1_55.lib;libboost_iostreams-vc120-mt-1_55.lib;libboost_coroutine-vc120-mt-1_55.lib;ssleay32MD.lib;libeay32MD.lib;WS2_32.lib;Userenv.lib;Rpcrt4.lib;crypt32.lib;shlwapi.lib;miniupnpc.lib;WS2_32.Lib;IPHlpApi.Lib;fc.lib;secp256k1.lib;</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -239,6 +238,7 @@
     <ClCompile Include="libraries\blockchain\TransactionEvaluationState.cpp" />
     <ClCompile Include="libraries\blockchain\TransactionOperations.cpp" />
     <ClCompile Include="libraries\blockchain\Types.cpp" />
+    <ClCompile Include="libraries\blockchain\UpdateTransferConfig.cpp" />
     <ClCompile Include="libraries\blockchain\WithdrawTypes.cpp" />
     <ClCompile Include="libraries\client\ApiLogger.cpp" />
     <ClCompile Include="libraries\client\BlockchainApi.cpp" />
@@ -398,13 +398,13 @@
     <ClInclude Include="libraries\include\blockchain\TransactionEvaluationState.hpp" />
     <ClInclude Include="libraries\include\blockchain\TransactionOperations.hpp" />
     <ClInclude Include="libraries\include\blockchain\Types.hpp" />
+    <ClInclude Include="libraries\include\blockchain\UpdateTransferConfig.hpp" />
     <ClInclude Include="libraries\include\blockchain\WithdrawTypes.hpp" />
     <ClInclude Include="libraries\include\client\ApiLogger.hpp" />
     <ClInclude Include="libraries\include\client\Client.hpp" />
     <ClInclude Include="libraries\include\client\ClientImpl.hpp" />
     <ClInclude Include="libraries\include\client\Messages.hpp" />
     <ClInclude Include="libraries\include\client\Notifier.hpp" />
-    <ClInclude Include="libraries\include\client\SeedNodes.hpp" />
     <ClInclude Include="libraries\include\cli\Cli.hpp" />
     <ClInclude Include="libraries\include\cli\Pretty.hpp" />
     <ClInclude Include="libraries\include\cli\PrintResult.hpp" />
